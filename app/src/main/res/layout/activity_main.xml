@@ -19,7 +19,8 @@
             android:inputType="textPersonName"
             android:hint="Name"
             android:ems="10"
-            android:id="@+id/name" />
+            android:id="@+id/name"
+            android:singleLine="true" />
 
         <EditText
             android:layout_width="match_parent"
@@ -27,13 +28,15 @@
             android:inputType="number"
             android:hint="Roll"
             android:ems="10"
-            android:id="@+id/roll" />
+            android:id="@+id/roll"
+            android:singleLine="true" />
 
         <EditText
             android:hint="Class"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/cls" />
+            android:id="@+id/cls"
+            android:singleLine="true" />
 
         <Button
             android:layout_width="fill_parent"

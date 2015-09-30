@@ -44,9 +44,11 @@ public class MkRequest extends Request<JSONObject> {
     @Override
     protected Response<JSONObject> parseNetworkResponse(NetworkResponse response) {
         try {
+
             String jsonString = new String(response.data, HttpHeaderParser.parseCharset(response.headers));
 
             return Response.success(new JSONObject(jsonString), HttpHeaderParser.parseCacheHeaders(response));
+
         } catch (UnsupportedEncodingException e) {
             return Response.error(new ParseError(e));
         } catch (JSONException je) {

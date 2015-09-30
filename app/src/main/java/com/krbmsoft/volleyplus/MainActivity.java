@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -55,7 +56,13 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onResponse(JSONObject response) {
-                        Log.d("Response: ", response.toString());
+                         name.setText("");
+                         roll.setText("");
+                         cls.setText("");
+
+                        Toast t = Toast.makeText(getApplicationContext(),"Data Saved to Database..",Toast.LENGTH_SHORT);
+                        t.show();
+                        name.requestFocus();
 
                     }
                 }, new Response.ErrorListener() {
